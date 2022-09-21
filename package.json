@@ -1,0 +1,31 @@
+{
+  "name": "agri-automation-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clear": "rimraf -rf ./dist ./.cache",
+    "start": "rimraf -rf ./dist ./.cache && parcel src/index.html",
+    "build": "npm run clear && parcel build src/index.html",
+    "build-gzip": "npm run clear && parcel build src/index.html && gzip dist/*.js && ls -al dist/"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^9.8.8",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^7.0.39",
+    "postcss-modules": "^4.2.2",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
