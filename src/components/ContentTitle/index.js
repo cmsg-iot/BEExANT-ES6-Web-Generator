@@ -1,4 +1,4 @@
-export const contentTitle = (text = "title", color = "#fff") => {
+export const ContentTitle = (text = "title", color = "#fff") => {
   let div = document.createElement("div");
   let span = document.createElement("span");
 

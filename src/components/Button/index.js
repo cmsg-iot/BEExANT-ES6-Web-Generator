@@ -1,4 +1,4 @@
-export const button = (
+export const Button = (
   id = "",
   type = "default",
   size = "md",

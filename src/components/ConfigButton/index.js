@@ -1,4 +1,6 @@
-export const configButton = (
+import { getTheme } from "../../themes/themeProvider";
+
+export const ConfigButton = (
   btnId = "",
   title = "",
   valueId = "",
@@ -12,13 +14,25 @@ export const configButton = (
   let td = document.createElement("td");
   div.id = btnId;
   div.className = "setting-btn";
+  div.style.background = getTheme().settingBtn.default;
   div.addEventListener("click", clickEvent);
-  td.className = "setting-btn-title 132";
+  div.addEventListener("click", () => {
+    div.style.background = getTheme().settingBtn.active;
+  });
+  div.addEventListener("mousemove", () => {
+    div.style.background = getTheme().settingBtn.hover;
+  });
+  div.addEventListener("mouseout", () => {
+    div.style.background = getTheme().settingBtn.default;
+  });
+  td.className = "setting-btn-title";
+  td.style.color = getTheme().settingBtn.titleText;
   td.innerText = title;
   tr.appendChild(td);
   td = document.createElement("td");
   td.id = valueId;
   td.className = "setting-btn-val";
+  td.style.color = getTheme().settingBtn.valText;
   td.innerHTML = value;
   tr.appendChild(td);
   tbody.appendChild(tr);

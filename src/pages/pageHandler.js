@@ -1,4 +1,5 @@
-import { bottomMenu } from "../components/bottomMenu";
+import { BottomMenu } from "../components/BottomMenu";
+import { getTheme } from "../themes/themeProvider";
 import basicConfigPage from "./basicConfigPage";
 import configPage from "./config";
 import customPage from "./custom";
@@ -71,7 +72,7 @@ export const initialBottomMenu = () => {
     terminal: "💻",
     test: "🔧",
   };
-  return bottomMenu(menu);
+  return BottomMenu(menu);
 };
 
 // 處理底部選單狀態顯示
@@ -126,6 +127,8 @@ function selectBottomMenu(target) {
   // 加入選擇的按鈕顯示
   if (targetMenu) {
     targetMenu.parentElement.classList.add("bottomMenu-selected");
+    targetMenu.parentElement.style.backgroundColor =
+      getTheme().bottomMenu.selected;
   }
 }
 

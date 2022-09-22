@@ -1,4 +1,6 @@
-export const bottomMenu = (props = {}) => {
+import { getTheme } from "../../themes/themeProvider";
+
+export const BottomMenu = (props = {}) => {
   let root = document.createElement("div");
   let div1 = document.createElement("div");
   root.id = "menu_bottom";
@@ -13,6 +15,13 @@ export const bottomMenu = (props = {}) => {
       div2.id = "bottomMenu_" + key;
       div2.innerHTML = element;
       div3.className = "bottom-menu-btn";
+      div3.style.backgroundColor = getTheme().bottomMenu.default;
+      div3.addEventListener("mouseover", () => {
+        div3.style.backgroundColor = getTheme().bottomMenu.hover;
+      });
+      div3.addEventListener("mouseout", () => {
+        div3.style.backgroundColor = getTheme().bottomMenu.default;
+      });
       div3.addEventListener("click", () => {
         location.hash = key;
       });

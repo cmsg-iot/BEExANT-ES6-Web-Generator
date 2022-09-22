@@ -1,6 +1,4 @@
-import { button } from "../../components/button";
-import { configButton } from "../../components/configButton";
-import { pageTitle } from "../../components/pageTitle";
+import { PageTitle } from "../../components/PageTitle";
 
 let configPage = document.createElement("div");
 let page = configPage;
@@ -8,6 +6,6 @@ let page = configPage;
 page.id = "page_config";
 page.classList.add("fade-in-500ms");
 
-page.appendChild(pageTitle("🔧 系統設定"));
+page.appendChild(PageTitle("🔧 系統設定"));
 
 export default configPage;
