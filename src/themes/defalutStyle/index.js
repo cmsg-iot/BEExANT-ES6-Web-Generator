@@ -3,6 +3,7 @@ export default {
   configPageTitleBg: "#A4A4A4",
   configPageTitleText: "#fff",
   configPageBg: "#3f3f3f",
+  contentTitleText: "#fff",
   bottomMenu: {
     default: "#ccc",
     hover: "#eee",
@@ -14,6 +15,12 @@ export default {
     active: "linear-gradient(90deg, #d3d3d3 37.14%, #fff 37.14%)",
     titleText: "#fff",
     valText: "#333",
+  },
+  tabs: {
+    default: "#ccc",
+    text: "#333",
+    selected: "#fff",
+    selectedText: "#333",
   },
   button: {
     default: {

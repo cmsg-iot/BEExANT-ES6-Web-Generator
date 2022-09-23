@@ -1,19 +1,25 @@
 // 參考 https://mui.com/ 主題配色
 export default {
-  configPageTitleBg: "#156789",
+  configPageTitleBg: "#1567a9",
   configPageTitleText: "#f0f000",
   configPageBg: "#ededed",
+  contentTitleText: "#333",
   bottomMenu: {
     default: "#1567a9",
     hover: "#1567b9",
     selected: "#1156cc",
   },
   settingBtn: {
-    default: "linear-gradient(90deg, #156789 37.14%, #fcfcfc 37.14%)",
-    hover: "linear-gradient(90deg, #1567a9 37.14%, #fefefe 37.14%)",
-    active: "linear-gradient(90deg, #1567c9 37.14%, #fff 37.14%)",
+    default: "linear-gradient(90deg, #1567a9 37.14%, #fcfcfc 37.14%)",
+    hover: "linear-gradient(90deg, #1567c9 37.14%, #fefefe 37.14%)",
     titleText: "#f0f000",
     valText: "#333",
+  },
+  tabs: {
+    default: "#1567a9",
+    text: "#f0f000",
+    selected: "#f0f000",
+    selectedText: "#333",
   },
   button: {
     default: {
