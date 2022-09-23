@@ -14,7 +14,7 @@ export const WeeksPicker = (id = "") => {
   let flag = true;
   td.addEventListener("click", () => {
     for (let i = 0; i < 7; i++) {
-      document.getElementById("sche_add_w" + (i + 1)).checked = flag;
+      document.getElementById(id + "_w" + (i + 1)).checked = flag;
     }
     flag = !flag;
   });
@@ -28,7 +28,7 @@ export const WeeksPicker = (id = "") => {
     let span = document.createElement("span");
     input.type = "checkbox";
     input.name = "w" + (i + 1);
-    input.id = "sche_add_" + input.name;
+    input.id = id + "_" + input.name;
     span.className = "transition-colors";
     span.innerText = week[i];
 
