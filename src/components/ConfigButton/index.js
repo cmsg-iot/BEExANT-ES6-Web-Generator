@@ -12,29 +12,36 @@ export const ConfigButton = (
   let tbody = document.createElement("tbody");
   let tr = document.createElement("tr");
   let td = document.createElement("td");
+
   div.id = btnId;
   div.className = "setting-btn";
   div.style.background = getTheme().settingBtn.default;
+
+  // 新增點擊事件
   div.addEventListener("click", clickEvent);
-  div.addEventListener("click", () => {
-    div.style.background = getTheme().settingBtn.active;
-  });
+
+  // 滑鼠懸停時效果
   div.addEventListener("mousemove", () => {
     div.style.background = getTheme().settingBtn.hover;
   });
+
+  // 滑鼠離開按鈕時效果
   div.addEventListener("mouseout", () => {
     div.style.background = getTheme().settingBtn.default;
   });
+
   td.className = "setting-btn-title";
   td.style.color = getTheme().settingBtn.titleText;
   td.innerText = title;
   tr.appendChild(td);
+
   td = document.createElement("td");
   td.id = valueId;
   td.className = "setting-btn-val";
   td.style.color = getTheme().settingBtn.valText;
   td.innerHTML = value;
   tr.appendChild(td);
+
   tbody.appendChild(tr);
   table.appendChild(tbody);
   div.appendChild(table);

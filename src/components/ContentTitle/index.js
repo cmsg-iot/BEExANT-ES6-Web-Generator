@@ -1,4 +1,9 @@
-export const ContentTitle = (text = "title", color = "#fff") => {
+import { getTheme } from "../../themes/themeProvider";
+
+export const ContentTitle = (
+  text = "title",
+  color = getTheme().contentTitleText
+) => {
   let div = document.createElement("div");
   let span = document.createElement("span");
 
