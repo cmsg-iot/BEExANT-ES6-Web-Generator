@@ -352,6 +352,26 @@ input[type="checkbox"]:checked + span {
   @apply mt-1 overflow-y-auto;
 }
 
+.time-picker {
+  @apply bg-white flex h-14 justify-center m-auto max-w-3xl mt-3 rounded-2xl shadow-md text-shadow-md w-11/12;
+}
+
+.time-picker table {
+  @apply font-bold self-center table-auto text-center text-dark text-xl w-11/12;
+}
+
+.area-card {
+  @apply bg-white flex justify-evenly flex-wrap h-auto  m-auto  max-w-3xl mt-3 rounded-2xl shadow-md text-shadow-md w-11/12;
+}
+
+.area-card-block {
+  @apply flex w-20 m-4 flex-col items-center justify-center;
+}
+
+.area-card-select {
+  @apply text-center border-2 border-dark ml-1 rounded-r-sm w-12;
+}
+
 .data-card td {
   width: 150px;
   font-weight: bold;
