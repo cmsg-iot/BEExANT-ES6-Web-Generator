@@ -13,7 +13,7 @@ export const Tabs = (props = defaultTabs) => {
   div_tabs.className = "tabs";
   div_tabPane.className = "tab-pane";
 
-  div_tabPane.style.height = window.innerHeight - 267 + "px";
+  div_tabPane.style.height = window.innerHeight - 247 + "px";
 
   // 產生 tabs
   for (let i = 0; i < props.length; i++) {
