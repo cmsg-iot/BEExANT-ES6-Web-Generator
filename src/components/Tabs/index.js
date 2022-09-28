@@ -5,11 +5,12 @@ let defaultTabs = [
   { title: "Tab3", pageElement: document.createElement("div") },
 ];
 
-export const Tabs = (props = defaultTabs) => {
+export const Tabs = (id = "", props = defaultTabs) => {
   let div_root = document.createElement("div");
   let div_tabs = document.createElement("div");
   let div_tabPane = document.createElement("div");
   div_root.className = "tabs-container";
+  div_root.id = id;
   div_tabs.className = "tabs";
   div_tabPane.className = "tab-pane";
 
@@ -44,6 +45,15 @@ export const Tabs = (props = defaultTabs) => {
       // 加入 page
       div_tabPane.appendChild(element.pageElement);
     });
+
+    // 預設選取
+    if (element.default) {
+      div_tab.classList.add("tab-active");
+      div_tab.style.color = getTheme().tabs.selectedText;
+      div_tab.style.backgroundColor = getTheme().tabs.selected;
+      div_tabPane.appendChild(element.pageElement);
+    }
+
     div_tabs.appendChild(div_tab);
   }
 
