@@ -1,7 +1,7 @@
 export const AreaCard = (id = "", num = 6, maxTime = 30) => {
   let div_root = document.createElement("div");
 
-  div_root.id = id + "_area";
+  div_root.id = id;
   div_root.className = "area-card";
 
   for (let i = 0; i < num; i++) {

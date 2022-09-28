@@ -12,7 +12,7 @@ export const TimerPicker = (id = "") => {
   td.innerText = "時間";
   tr.appendChild(td);
   td = document.createElement("td");
-  (input.type = "time"), (input.id = id + "_time");
+  (input.type = "time"), (input.id = id);
   td.appendChild(input);
   tr.appendChild(td);
   tbody.appendChild(tr);
