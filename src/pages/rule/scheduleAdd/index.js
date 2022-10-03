@@ -41,7 +41,7 @@ function initialParams() {
   }
 }
 
-// 之後由controller提供
+// 之後由controller提供，需先更新排程判斷有無重複相同的排程
 function addSchedule() {
   let week = "";
 

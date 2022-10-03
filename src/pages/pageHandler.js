@@ -2,14 +2,12 @@ import { BottomMenu } from "../components/BottomMenu";
 import { getTheme } from "../themes/themeProvider";
 import basicConfigPage from "./basicConfigPage";
 import configPage from "./config";
-import customPage from "./custom";
 import errorPage from "./error";
 import homePage from "./home";
 import networkPage from "./network";
-import schedulePage from "./schedule";
+import rulePage from "./rule";
 import systemPage from "./system";
 import terminalPage from "./terminal";
-import testPage from "./test";
 
 // 回傳處理後的頁面元件
 export const handlePage = (container = document.createElement("div")) => {
@@ -31,16 +29,12 @@ export const handlePage = (container = document.createElement("div")) => {
     case "#home":
       container.appendChild(homePage);
       break;
-    case "#custom":
-      basicConfigPage.appendChild(customPage);
+    case "#rule":
+      basicConfigPage.appendChild(rulePage);
       container.appendChild(basicConfigPage);
       break;
     case "#network":
       basicConfigPage.appendChild(networkPage);
-      container.appendChild(basicConfigPage);
-      break;
-    case "#schedule":
-      basicConfigPage.appendChild(schedulePage);
       container.appendChild(basicConfigPage);
       break;
     case "#system":
@@ -49,10 +43,6 @@ export const handlePage = (container = document.createElement("div")) => {
       break;
     case "#terminal":
       basicConfigPage.appendChild(terminalPage);
-      container.appendChild(basicConfigPage);
-      break;
-    case "#test":
-      basicConfigPage.appendChild(testPage);
       container.appendChild(basicConfigPage);
       break;
     default:
@@ -65,12 +55,10 @@ export const handlePage = (container = document.createElement("div")) => {
 
 export const initialBottomMenu = () => {
   let menu = {
-    schedule: "📅",
-    custom: "📝",
+    rule: "📝",
     network: "🌐",
     config: "🔧",
     terminal: "💻",
-    test: "🔧",
   };
   return BottomMenu(menu);
 };
@@ -86,15 +74,11 @@ export const handleBottomMenu = () => {
     case "#home":
       showBottomMenu(0);
       break;
-    case "#custom":
+    case "#rule":
       selectBottomMenu(target);
       showBottomMenu(1);
       break;
     case "#network":
-      selectBottomMenu(target);
-      showBottomMenu(1);
-      break;
-    case "#schedule":
       selectBottomMenu(target);
       showBottomMenu(1);
       break;
@@ -103,10 +87,6 @@ export const handleBottomMenu = () => {
       showBottomMenu(1);
       break;
     case "#terminal":
-      selectBottomMenu(target);
-      showBottomMenu(1);
-      break;
-    case "#test":
       selectBottomMenu(target);
       showBottomMenu(1);
       break;

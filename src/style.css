@@ -159,6 +159,10 @@ input[type="checkbox"]:checked + span {
   @apply text-xl font-bold rounded-3xl  shadow-md transition-colors;
 }
 
+.btn-basic:disabled {
+  @apply bg-menu-100 text-menu-300 active:bg-menu-100 hover:bg-menu-100;
+}
+
 .btn-sm {
   @apply w-16 h-12 m-2;
 }
@@ -208,7 +212,7 @@ input[type="checkbox"]:checked + span {
 }
 
 .setting-btn {
-  @apply bg-linear-gray-100 cursor-pointer text-xl  w-11/12 max-w-xl h-14 rounded-2xl shadow-md flex justify-center m-auto mt-8;
+  @apply bg-linear-gray-100 cursor-pointer text-xl  w-11/12 max-w-xl h-14 rounded-2xl shadow-md flex justify-center m-auto mt-7 mb-7;
 }
 
 .setting-btn:active {
@@ -228,7 +232,7 @@ input[type="checkbox"]:checked + span {
 }
 
 .schedule {
-  @apply bg-white   shadow-md  w-11/12 max-w-3xl rounded-2xl flex justify-center flex-wrap m-auto mt-8;
+  @apply bg-white   shadow-md  w-11/12 max-w-3xl rounded-2xl flex justify-center flex-wrap m-auto mt-6 mb-6;
 }
 
 .schedule-week {
@@ -240,7 +244,7 @@ input[type="checkbox"]:checked + span {
 }
 
 .schedule-week-select {
-  @apply bg-white text-lg text-shadow-md shadow-md w-11/12 max-w-3xl h-14 rounded-2xl flex justify-center m-auto mt-8;
+  @apply bg-white text-lg text-shadow-md shadow-md w-11/12 max-w-3xl h-14 rounded-2xl flex justify-center m-auto mt-4;
 }
 
 .schedule-week-select table {
@@ -370,6 +374,14 @@ input[type="checkbox"]:checked + span {
 
 .area-card-select {
   @apply text-center border-2 border-dark ml-1 rounded-r-sm w-12;
+}
+
+.row {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.col {
 }
 
 .data-card td {
@@ -700,7 +712,7 @@ input:checked + .auto.slider::after {
   }
 
   .danger {
-    @apply hover:bg-red-500 active:bg-red-400;
+    @apply hover:bg-red-400 active:bg-red-300;
   }
 
   .on {

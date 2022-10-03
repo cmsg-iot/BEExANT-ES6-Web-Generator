@@ -11,7 +11,7 @@
     "start": "rimraf -rf ./dist ./.cache && parcel src/index.html",
     "build": "npm run clear && NODE_ENV=production parcel build src/index.html",
     "build-dev": "npm run clear && NODE_ENV=test parcel build src/index.html",
-    "build-gzip": "npm run clear && parcel build src/index.html && gzip dist/*.js && ls -al dist/"
+    "build-gzip": "npm run clear && NODE_ENV=production parcel build src/index.html && gzip -c dist/*.js > dist/src.js.gz && ls -al dist/ | grep .js.gz"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

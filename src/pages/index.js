@@ -4,6 +4,7 @@ let mainContainer = document.createElement("div");
 let pageContainer = document.createElement("div");
 let floatUIContainer = document.createElement("div");
 
+// page 放置頁面相關物件，float 放置浮動介面操作相關物件, main 依照順序加入 page 與 float 頁面
 mainContainer.id = "container";
 pageContainer.id = "page-container";
 floatUIContainer.id = "ui-container";
@@ -25,8 +26,13 @@ window.addEventListener("hashchange", () => {
   handleBottomMenu();
 });
 
+// 當視窗完成載入時(HTML,CSS,JS,圖片...等)執行其中的函式
 window.onload = () => {
   handleBottomMenu();
+};
+
+window.onresize = () => {
+  location.reload();
 };
 
 export { mainContainer };

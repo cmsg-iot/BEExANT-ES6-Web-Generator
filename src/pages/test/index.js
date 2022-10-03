@@ -1,6 +1,7 @@
 import { Button } from "../../components/Button";
 import { ConfigButton } from "../../components/ConfigButton";
 import { PageTitle } from "../../components/PageTitle";
+import { Tabs } from "../../components/Tabs";
 
 let testPage = document.createElement("div");
 let page = testPage;
@@ -38,5 +39,11 @@ page.appendChild(Button("w-3", "warning", "lg", "w-lg"));
 page.appendChild(Button("dan-1", "danger", "sm", "dan-sm"));
 page.appendChild(Button("dan-2", "danger", "md", "dan-md"));
 page.appendChild(Button("dan-3", "danger", "lg", "dan-lg"));
+
+try {
+  page.appendChild(Tabs());
+} catch (error) {
+  console.error(error);
+}
 
 export default testPage;

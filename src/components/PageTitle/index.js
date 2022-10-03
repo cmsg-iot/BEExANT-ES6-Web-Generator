@@ -1,4 +1,4 @@
-import theme, { getTheme } from "../../themes/themeProvider";
+import { getTheme } from "../../themes/themeProvider";
 
 export const PageTitle = (
   text = "title",
